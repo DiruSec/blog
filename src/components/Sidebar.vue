@@ -16,7 +16,7 @@
         </ul>
         <ul class="thirdbar">
             <li>
-                <a v-for="icon in icons" :key="icon.href" :style="{'mask-image': 'url('+icon.icon+')'}" class="third-icon icon-color" href="https://github.com/DiruSec"></a>
+                <a v-for="icon in icons" :key="icon.href" :style="{'mask-image': 'url('+icon.icon+')'}" class="third-icon icon-color" :href="icon.href"></a>
                 <a class="third-icon icon-material" href="https://www.google.com/webhp#newwindow=1&safe=strict&q=site:https://dirusec.com/blog"><i class="material-icons">search</i></a>
             </li>
         </ul>

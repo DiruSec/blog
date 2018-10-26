@@ -4,22 +4,25 @@
       <Sidebar />
     </nav>
     <div id="router">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <!--<div id="nav">-->
+      <!--<router-link to="/home">Home</router-link> |-->
+      <!--<router-link to="/about">About</router-link>-->
+    <!--</div>-->
     <router-view/>
+    <Footer />
     </div>
   </div>
 </template>
 
 <script>
 import Sidebar from '@/components/Sidebar.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
     name: 'home',
     components: {
-        Sidebar
+        Sidebar,
+      Footer
     }
 }
 </script>
@@ -27,13 +30,14 @@ export default {
 <style>
   @import url(../node_modules/material-design-icons/iconfont/material-icons.css);
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: Helvetica Neue,Arial,Hiragino Sans GB,STHeiti,Microsoft YaHei;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: #666;
   }
   #nav {
     padding: 30px;
+    text-align: center;
   }
 
   #nav a {
@@ -57,8 +61,12 @@ export default {
 
   #router{
     background-color: #ffffff;
-    text-align: center;
     max-width: 1390px;
     padding: 0 40px 0 290px;
+    box-sizing: border-box;
+  }
+
+  a{
+    text-decoration: none;
   }
 </style>
