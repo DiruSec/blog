@@ -5,6 +5,8 @@ import Index from './views/Index.vue'
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
+  base: '/blog/',
   routes: [{
     path: '/',
     name: 'index',
@@ -18,10 +20,7 @@ export default new Router({
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    component: () => import('./views/About.vue')
   },
     {
       path: '/article/:path',
@@ -42,6 +41,11 @@ export default new Router({
       path: '/archive',
       name: 'archive',
       component: () => import ('./views/Archive.vue')
+    },
+    {
+      path: '*',
+      name: 'notfound',
+      component: () => import ('./views/NotFound.vue')
     }
   ]
 })

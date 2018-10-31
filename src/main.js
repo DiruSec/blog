@@ -5,6 +5,11 @@ import store from './store'
 
 Vue.config.productionTip = false;
 
+router.afterEach(()=>{
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0
+});
+
 new Vue({
   router,
   store,

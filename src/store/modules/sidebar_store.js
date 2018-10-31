@@ -2,7 +2,8 @@ export default {
     state:{
         genConfig: {
             'title': 'Diru\'s Daydream',
-            'headerPic': true
+            'headerPic': true,
+            'rootPrefix': '/blog'
         },
         navs: [
             {
