@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    © {{year}} {{genConfig.title}} | <a href="https://github.com/DiruSec/dreamyBlog/">Source</a>
+    © {{year}} {{genConfig.title}} | <a href="https://github.com/DiruSec/blog/">Source</a>
     <br/>
     Powered by <a href="https://github.com/vuejs/vue">Vue</a> & <a href="https://github.com/pallets/flask">Flask</a>
   </div>

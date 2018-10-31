@@ -4,7 +4,7 @@ import api from './api'
 Vue.use(vuex);
 
 const axios = require('axios');
-const apiPrefix = 'http://localhost:5000/api/';
+const apiPrefix = '/blog/api/';
 
 import sidebar_store from './modules/sidebar_store';
 import articleList_store from './modules/articlelist_store';
