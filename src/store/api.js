@@ -1,4 +1,10 @@
+import sidebar_store from './modules/sidebar_store';
+
 export default{
+  updateTitle: function(string=''){
+    document.title = string + ' - ' + sidebar_store.state.genConfig.title;
+  },
+
   parseAjaxData: function(data){
     for (let index in data){
       data[index]['tags'] = data[index]['tag'];
@@ -11,6 +17,17 @@ export default{
       data[index]['updatedAt'] = data[index]['updated']
     }
 
+    return (data)
+  },
+
+  parseArchiveData: function(data){
+    for (let key in data) {
+      for (let index in data[key]) {
+        data[key][index]['createdAt'] = data[key][index]['created'];
+        data[key][index]['_id'] = data[key][index]['pid'];
+        data[key][index]['pathName'] = data[key][index]['path'];
+      }
+    }
     return (data)
   },
   

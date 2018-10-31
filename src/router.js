@@ -11,15 +11,10 @@ export default new Router({
     component: Index
   },
     {
-      path: '/:page',
+      path: '/page/:page',
       name: 'page',
       component: Index
     },
-  {
-    path: '/home',
-    name: 'home',
-    component: () => import ('./views/Home.vue')
-  },
   {
     path: '/about',
     name: 'about',

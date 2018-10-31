@@ -1,0 +1,55 @@
+header{
+  background-image: url(../../assets/img/cover.webp);
+  display: none;
+  background-color: #202020;
+  box-shadow: 0 0 5px #333;
+  height: 50px;
+  left: 0;
+  line-height: 50px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9
+}
+
+.expand-btn{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.expand-btn span{
+  position: absolute;
+  top:5px;
+  left: 5px;
+  font-size: 40px;
+  color: #FFF;
+  display: block;
+}
+#sidebar-mask{
+  display: none;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+header h1{
+  font-size: 16px;
+  text-align: center;
+}
+
+header a{
+  color: #FFF;
+}
+
+@media screen and (max-width: 769px){
+  header{
+    display: block;
+  }
+
+}

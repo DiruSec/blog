@@ -22,10 +22,10 @@
         if (this.page===2){
           return '/'
         }
-        return '/'+(this.page-1)
+        return '/page/'+(this.page-1)
       },
       nextpage: function(){
-          return '/'+(this.page+1)
+          return '/page/'+(this.page+1)
       }
     }
   }

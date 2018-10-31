@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Topbar />
     <nav class="sidebar">
       <Sidebar />
     </nav>
@@ -15,12 +16,14 @@
 </template>
 
 <script>
+import Topbar from '@/components/Topbar.vue'
 import Sidebar from '@/components/Sidebar.vue'
 import FooterView from '@/components/Footer.vue'
 
 export default {
     name: 'home',
     components: {
+      Topbar,
         Sidebar,
       FooterView
     }
@@ -36,10 +39,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     color: #666;
   }
-  #nav {
-    padding: 30px;
-    text-align: center;
-  }
 
   #nav a {
     font-weight: bold;
@@ -48,22 +47,5 @@ export default {
 
   #nav a.router-link-exact-active {
     color: #42b983;
-  }
-
-  .sidebar{
-    background-color: #202020;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 250px;
-    z-index: 2;
-  }
-
-  #router{
-    background-color: #ffffff;
-    max-width: 1390px;
-    padding: 0 40px 0 290px;
-    box-sizing: border-box;
   }
 </style>

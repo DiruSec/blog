@@ -3,12 +3,12 @@
     <h1 class="title">
       存档
     </h1>
-    <div v-for="archive in archiveList" :key="archive.name" class="archive-content">
+    <div v-for="(archive, key) in archiveList" :key="key" class="archive-content">
       <h2 class="archive-date">
-        {{archive.date}}
+        {{key}}
       </h2>
       <ul>
-        <li class="archive-article" v-for="article in archive.articles" :key="article.id">
+        <li class="archive-article" v-for="article in archive" :key="article._id">
           <router-link class="archive-link" :to="'/article/'+article.path">{{article.title}}</router-link>
           <span class="date">{{article.createdAt}}</span>
         </li>
@@ -25,8 +25,8 @@
         return this.$store.state.archive
       }
     },
-    mounted(){
-      this.$store.dispatch("getArchiveList")
+    beforeMount(){
+      this.$store.dispatch("getArchiveList");
     },
   }
 </script>
@@ -38,7 +38,7 @@
   }
   .archive-article{
     position: relative;
-    left: 2rem;
+    /*left: 2rem;*/
     line-height: 1.5;
   }
   .archive-link{

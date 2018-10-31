@@ -289,6 +289,12 @@ article.tags section a:hover {
   display: inline-block;
   background: #eee;
   margin-right: .5rem;
-  padding: 0 .25rem;
+  padding: .3rem .5rem;
+}
+
+.info-tags .material-icons{
+  font-size: 14px;
+  position: relative;
+  top: 2px;
 }
 

@@ -16,7 +16,7 @@
         <span class="info-tagtext">{{tag}}</span>
       </div>
     </div>
-    <relative-post />
+    <relative-post :prev="relativePost.newer" :next="relativePost.older" />
     <div class="disqus">
 
     </div>
@@ -33,10 +33,18 @@
     computed: {
       article: function(){
         return this.$store.state.article;
+      },
+      relativePost: function(){
+        return this.$store.state.relativePost;
       }
     },
-    mounted(){
-      this.$store.dispatch("getArticle",this.$route.params.path)
+    beforeMount(){
+      this.$store.dispatch("getArticle",this.$route.params.path);
+    },
+    watch: {
+      '$route' (to, from){
+        this.$store.dispatch("getArticle",this.$route.params.path);
+      }
     },
   }
 </script>

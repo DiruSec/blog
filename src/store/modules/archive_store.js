@@ -1,8 +1,7 @@
 export default{
   state:[
     {
-      "date": "2017/9",
-      "articles": [
+      "2017/9": [
         {
           '_id': 'f3yn2ajcpb9',
           'title': 'Lorem Ipsum',

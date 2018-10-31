@@ -17,12 +17,12 @@ export default {
             },
             {
                 'link': '/tag',
-                'icon': 'flag',
+                'icon': 'label',
                 'name': '标签'
             },
             {
                 'link': '/about',
-                'icon': 'contacts',
+                'icon': 'person',
                 'name': '关于'
             }
         ],

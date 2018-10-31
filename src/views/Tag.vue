@@ -18,8 +18,8 @@
         return this.$route.params.tagname
       }
     },
-    mounted(){
-      this.$store.dispatch("getArticleListByTag",this.$route.params.tagname)
+    beforeMount(){
+      this.$store.dispatch("getArticleListByTag",this.$route.params.tagname);
     },
     components: {
       articlelist

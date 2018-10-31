@@ -96,3 +96,22 @@ span{
     margin-right: 20px;
     overflow: hidden;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .profile-title{
+        display: none;
+    }
+
+    span{
+        display: none;
+    }
+
+    #sidebar-mask{
+        display: block;
+    }
+}

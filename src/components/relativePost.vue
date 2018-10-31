@@ -1,14 +1,30 @@
 <template>
   <nav class="relative-post">
-    <router-link class="nextpost" to="/article/">Lorem Ipsum »</router-link>
-    <router-link class="prevpost" to="/article/">« Lorem Ipsum</router-link>
+    <router-link class="nextpost" v-if="notBlank(next)" :to="'/article/'+next.path">{{next.title}} &raquo;</router-link>
+    <router-link class="prevpost" v-if="notBlank(prev)" :to="'/article/'+prev.path">&laquo; {{prev.title}}</router-link>
     <div class="clear"></div>
   </nav>
 </template>
 
 <script>
   export default {
-    name: "relative-post"
+    name: "relative-post",
+    props: {
+      next: {
+        type: Object
+      },
+      prev: {
+        type: Object
+      }
+    },
+    methods: {
+      notBlank: function(object) {
+        for (let index in object){
+          return true
+        }
+        return false
+      }
+    }
   }
 </script>
 

@@ -42,13 +42,14 @@ article{
 }
 
 .btn{
-  font-family: "Consolas", "Courier New", Courier, mono, serif;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   display: inline-block;
-  padding: 2px 5px;
+  padding: 3px 6px;
   border-radius: 5px;
   margin-bottom: 0;
   color: #333;
   font-weight: 100;
+  font-size: 14px;
   margin-right: .5rem;
   transition: background .2s ease;
 }
@@ -58,16 +59,13 @@ article{
   background: #FFF;
 }
 
-.category:hover{
-  background: limegreen;
-}
-
 .tag{
-  border: 1px skyblue solid;
+  border: 1px #4B91D5 solid;
   margin-right: .5rem;
   background: #FFF;
+  color: #4B91D5;
 }
 
 .tag:hover{
-  background: skyblue;
+  color: #216EBA;
 }

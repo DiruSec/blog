@@ -1,5 +1,35 @@
-a,
-a:hover {
+body{
+  transition: transform .2s cubic-bezier(.4,.01,.165,.99);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.side{
+  position: fixed;
+  transform: translate3D(249px,0,0);
+}
+
+.sidebar{
+  background-color: #202020;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 250px;
+  z-index: 2;
+  box-shadow: 0 0 5px #333333;
+}
+
+#router{
+  background-color: #ffffff;
+  max-width: 1390px;
+  padding: 0 40px 0 290px;
+  box-sizing: border-box;
+}
+
+a, a:hover {
   color: #2479CC;
   text-decoration: none
 }
@@ -9,8 +39,7 @@ a:hover {
   box-sizing: border-box
 }
 
-ul,
-ol {
+ul, ol {
   padding: 0
 }
 
@@ -18,4 +47,30 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 400;
   margin: 0;
   padding: 0;
+}
+
+/* Responive Area */
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .sidebar {
+    width: 75px;
+  }
+
+  #router{
+    padding-left: 115px;
+  }
+}
+
+@media screen and (max-width: 769px){
+  .sidebar {
+    left: -250px;
+  }
+
+  #router{
+    min-height: 100%;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+  }
 }

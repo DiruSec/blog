@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="content-end">
-      <router-link class="category btn" :to="'/category/'+article.category">{{article.category}}</router-link>
+      <span class="category btn">{{article.category}}</span>
       <div class="cate-tag-splitter"></div>
       <router-link class="tag btn" :to="'/tag/'+tag" v-for="tag in article.tags" :key="tag">{{tag}}</router-link>
     </div>
@@ -25,7 +25,6 @@
     name: "articlelist",
     props:{
       article: {
-        type: Object,
         required: true
       }
     }

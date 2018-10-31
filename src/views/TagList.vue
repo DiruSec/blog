@@ -17,8 +17,8 @@
         return this.$store.state.taglist
       }
     },
-    mounted(){
-      this.$store.dispatch("getTagList")
+    beforeMount(){
+      this.$store.dispatch("getTagList");
     },
   }
 </script>
@@ -26,12 +26,17 @@
 <style scoped src="../assets/css/Title.css"></style>
 <style scoped>
   .tags{
-    border: 1px solid rgba(36,121,204,.8);
+    border: 1px solid #4B91D5;
     border-radius: 4px;
-    color: rgba(36,121,204,.8);
+    color: #4B91D5;
     padding: .5rem .8rem;
     margin: 0 1rem 1rem 0;
     line-height: 1rem;
     display: inline-block;
+    transition: color ease .2s;
+  }
+
+  .tags:hover{
+    color: #216EBA
   }
 </style>
