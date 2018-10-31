@@ -9,25 +9,38 @@
     </h1>
     </header>
 
+    <div class="entry-content" v-html="article.content"></div>
+    <div class="post-info">
+      <div v-for="tag in article.tags" class="info-tags" :key="tag">
+      <span class="material-icons">local_offer</span>
+        <span class="info-tagtext">{{tag}}</span>
+      </div>
+    </div>
+    <relative-post />
+    <div class="disqus">
+
+    </div>
+
   </article>
 </template>
 
 <script>
+  import RelativePost from "../components/relativePost";
+
   export default {
-    name: "article",
+    components: {RelativePost},
+    name: "articleview",
     computed: {
       article: function(){
-        let articleList = this.$store.state.articleList;
-        for (let list in articleList){
-          if (articleList[list].pathName === this.$route.params.path){
-            return articleList[list]
-          }
-        }
+        return this.$store.state.article;
       }
-    }
+    },
+    mounted(){
+      this.$store.dispatch("getArticle",this.$route.params.path)
+    },
   }
 </script>
 
-<style scoped src="../assets/css/Article.css">
+<style src="../assets/css/Article.css">
 
 </style>

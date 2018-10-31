@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav>
+    <nav class="sidebar">
       <Sidebar />
     </nav>
     <div id="router">
@@ -9,26 +9,27 @@
       <!--<router-link to="/about">About</router-link>-->
     <!--</div>-->
     <router-view/>
-    <Footer />
+    <FooterView />
     </div>
   </div>
 </template>
 
 <script>
 import Sidebar from '@/components/Sidebar.vue'
-import Footer from '@/components/Footer.vue'
+import FooterView from '@/components/Footer.vue'
 
 export default {
     name: 'home',
     components: {
         Sidebar,
-      Footer
+      FooterView
     }
 }
 </script>
 
 <style>
   @import url(../node_modules/material-design-icons/iconfont/material-icons.css);
+  @import url(./assets/css/Base.css);
   #app {
     font-family: Helvetica Neue,Arial,Hiragino Sans GB,STHeiti,Microsoft YaHei;
     -webkit-font-smoothing: antialiased;
@@ -49,7 +50,7 @@ export default {
     color: #42b983;
   }
 
-  nav{
+  .sidebar{
     background-color: #202020;
     height: 100%;
     top: 0;
@@ -64,9 +65,5 @@ export default {
     max-width: 1390px;
     padding: 0 40px 0 290px;
     box-sizing: border-box;
-  }
-
-  a{
-    text-decoration: none;
   }
 </style>

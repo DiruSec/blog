@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "footer",
+    name: "footerview",
     computed:{
       year: function(){
         return new Date().getFullYear()

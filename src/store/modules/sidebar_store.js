@@ -11,12 +11,12 @@ export default {
                 'name': '首页'
             },
             {
-                'link': '/archives',
+                'link': '/archive',
                 'icon': 'archive',
                 'name': '归档'
             },
             {
-                'link': '/tags',
+                'link': '/tag',
                 'icon': 'flag',
                 'name': '标签'
             },

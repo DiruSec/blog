@@ -10,6 +10,11 @@ export default new Router({
     name: 'index',
     component: Index
   },
+    {
+      path: '/:page',
+      name: 'page',
+      component: Index
+    },
   {
     path: '/home',
     name: 'home',
@@ -25,8 +30,23 @@ export default new Router({
   },
     {
       path: '/article/:path',
-      name: 'article',
+      name: 'articleview',
       component: () => import ('./views/Article.vue')
+    },
+    {
+      path: '/tag',
+      name: 'taglist',
+      component: () => import ('./views/TagList.vue')
+    },
+    {
+      path: '/tag/:tagname',
+      name: 'tagname',
+      component: () => import ('./views/Tag.vue')
+    },
+    {
+      path: '/archive',
+      name: 'archive',
+      component: () => import ('./views/Archive.vue')
     }
   ]
 })
